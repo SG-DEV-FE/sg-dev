@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Gradient text styles
+.text-gradient-primary {
+  background: linear-gradient(40deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Animation keyframes
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce 2s infinite;
+}
+
+// Hero section gradient overlay
+.hero-gradient-overlay {
+  background-image: linear-gradient(rgba(0, 0, 100, 0.7), rgba(0, 0, 100, 0.7)), url('https://res.cloudinary.com/stegault/image/upload/v1591012741/bg_image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+// Transitions
+.fade-in {
+  opacity: 0;
+  transition: opacity 1000ms ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+// Image hover effects
+.image-hover-scale {
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
